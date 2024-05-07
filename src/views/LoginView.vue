@@ -12,13 +12,13 @@ const loginForm = ref({
 
 const handleLogin = (event: Event) => {
   event.preventDefault()
-  com_post('/api/login',loginForm.value).then(res=>{
+  com_post('/api/login', loginForm.value).then((res: any) => {
     if (res.code === 200) {
-      console.log('Login Success')
+      console.log('Login Success');
     } else {
-      console.log('Login Failed')
+      console.log('Login Failed');
     }
-  })
+  });
 }
 
 </script>
